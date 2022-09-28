@@ -84,16 +84,13 @@ const increBtn = document.querySelectorAll('.plus');
 // Increment of Order
 increBtn.forEach((btn,value) =>{
   btn.addEventListener("click",()=>{
-      if (value == 0){
         const allbox = document.querySelectorAll(".small-box");
         let count = +allbox[value].innerHTML
         count = count + 1;
         btn.previousElementSibling.innerHTML = count;
         orderlist.foodQuatity[value].innerHTML = count;
         totalAmount.innerHTML = "$" + total(orderlist.foodPrice, orderlist.foodQuatity) + ".00"; 
-      }
-      
-    })
+      })
 })
 const decreBtn = document.querySelectorAll('.minus');
     decreBtn.forEach((btn,value)=>{
