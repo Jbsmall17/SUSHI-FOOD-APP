@@ -1,0 +1,416 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  font-family: 'Mulish', sans-serif;
+}
+body{
+  height: 105vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+main{
+  height: 100%;
+  width: 95%;
+  display:flex;
+  gap:30px;
+  margin: 15px auto;
+}
+section.sidebar{
+  color:white;
+  width: 132px;
+  height: 640px;
+  background: #0C0B0B;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+section.sidebar div{
+  height: 100px;
+  width:132px;
+  display:grid;
+  place-items: center;
+  cursor:pointer
+}
+div.cart::after{
+  position: absolute;
+  top:58%;
+  left:7.5%;
+  content:attr(data-counter);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background: red;
+  color:white;
+  font-size: 11px;
+}
+section.sidebar div:first-child{
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+section.sidebar div:last-child{
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+section.sidebar div.cart{
+  background-color: #F1D5BB;
+}
+section.sidebar div span{
+  font-size:2.5rem;
+}
+section.sidebar div img{
+  height: 2.5rem;
+  width: 2.5rem;
+}
+section.mainbar{
+  width:100%;
+  height:100%;
+}
+section.menulist{
+  margin: 0 auto;
+  height: 600px;
+  width: 95%;
+  height: 97.2%;
+  display:none;
+}
+section.menulist h1{
+  width:360px;
+  height: auto;
+  position:relative;
+  margin-bottom: 30px;
+  font-size: 30px;
+}
+section.menulist h1::after{
+  content: '';
+  width: 188px;
+  height: 5px;
+  background: #F1D5BB;
+  position:absolute;
+  top:100%;
+  left:0;
+}
+.menulist .foodlist{
+  display: grid;
+  grid-template-columns: repeat(4, 225px);
+  grid-template-rows: repeat(2, 260px);
+  column-gap: 35px;
+}
+.menulist .foodlist div img{
+  width:100%;
+  height: 80%;
+}
+.menulist .foodlist p {
+  text-align: center;
+  font-weight: 600;
+  font-size: 20px;
+}
+#loading{
+  width: 194px;
+  height: 50px;
+  margin: 0 50%;
+  transform: translateX(-50%);
+  color:white;
+  background: black;
+  border-radius:2px;
+  border:none;
+}
+section.shopping-cart{
+  height: 600px;
+  display:block;
+}
+section.shopping-cart h1{
+  width: 135px;
+  height: 63px;
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 63px;
+  position:relative;
+  margin-bottom: 15px;
+}
+section.shopping-cart h1::after{
+  content: '';
+  width: 134px;
+  height: 5px;
+  background: #F1D5BB;
+  position:absolute;
+  top:100%;
+  left:0%;
+}
+div.abcde{
+  display:flex;
+  gap:41px;
+}
+div.cartlist{
+  width: 500px;
+  height: auto;
+  border-radius: 3px;
+  display:flex;
+  flex-direction: column;
+}
+div.cartlist .item{
+  height: 125px;
+  width:  100%;
+  display:flex;
+  background: #F1D5BB;
+  align-items: center;
+  justify-content: space-between;
+  padding:37px 23px 43px 20px;
+}
+div.cartlist .item div:nth-child(1){
+  width: 90px;
+  height: 90px;
+}
+div.cartlist .item div:nth-child(1) img{
+  width: 100%;
+  height: 100%;
+  border-radius: 45px;
+}
+div.cartlist .item div:nth-child(2){
+  width: 162px;
+  height: 70px;
+  padding-top:10px;
+}
+.foodname{
+  margin-bottom: 10px;
+}
+div.cartlist .item div:nth-child(3){
+  height: 12px;
+  width: 55px;
+}
+.minus,.plus{
+  cursor:pointer
+}
+.small-box{
+  height: 12px;
+  width: 25px;
+  padding: 5px 5px;
+  background: white;
+  font-weight: 400;
+font-size: 15px;
+line-height: 25px;
+}
+div.cartlist .item div:nth-child(4){
+  height: 20px;
+  width:20px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+div.cartlist .item .times{
+  cursor:pointer
+}
+div.checkout-box{
+  display:flex;
+  flex-direction: column;
+  width: 443px;
+  height: 500px;
+  border-radius: 3px;
+}
+div.checkout-box h1{
+  width: 249px;
+  height: 50px;
+  font-weight: 400;
+  font-size: 40px;
+}
+div.reciept-box{
+  width:100%;
+  height:185px;
+  background: #F1D5BB;
+  padding: 15px 30px 25px 30px;
+}
+div.reciept-box button{
+  width: 100%;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 25px;
+  color: white;
+  background: black;
+  padding: 15px 60px;
+}
+div.checkout-box p{
+  width:244px;
+  height:30px;
+  font-size: 30px;
+  line-height: 15px;
+}
+div.checkout-box p span{
+  margin-left: 20px;
+}
+div.promo-code{
+  width:100%;
+  height:250px;
+  padding:32px 38px 32px 40px;
+}
+div.promo-code h2{
+  font-weight: 400;
+  font-size: 40px;
+  margin-bottom: 25px;
+}
+div.promo-code input{
+  width: 365px;
+  height: 78px;
+  border: 1px solid #F1D5BB;
+  margin-bottom: 30px;
+}
+input::placeholder{
+  font-weight: 200;
+  font-size: 30px;
+  color: rgba(0, 0, 0, 0.6);
+  padding: 20px 109px 20px 20px;
+}
+div.promo-code button{
+  width: 166px;
+  height: 78px;
+  background: #000000;
+  color: white;
+}
+/* media Queries */
+@media (min-width: 600px) and (max-width: 1280px){
+  main.menu{
+    width: 100%;
+    flex-direction: column;
+    gap:20px;
+    margin: 15px auto;
+  }
+  section.sidebar{
+    height: 132px;
+    align-self: center;
+    width: 92%;
+    flex-direction: row;
+  }
+  div.cart::after{
+    position: absolute;
+    top:6%;
+    left:59%;
+  }
+  section.sidebar div:first-child{
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 25px;
+  }
+  .menulist .foodlist{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    column-gap:10%;
+    align-self: center;
+    width: 98%;
+  }
+  .menulist .foodlist div p{
+    display:flex;
+    height: 20%;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+  }
+  div.abcde{
+    gap:20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 92%;
+    margin: 0 auto;
+  }
+  div.cartlist,div.checkout-box{
+    width: 80%;
+  }
+  div.checkout-box{
+    text-align: center;
+  }
+  section.shopping-cart > h1{
+    margin: 15px auto;
+  }
+}
+@media (min-width: 314px) and (max-width: 599px){
+  main.menu{
+    width: 100%;
+    flex-direction: column;
+    gap:20px;
+    margin: 5px auto;
+  }
+  section.sidebar{
+    height: 132px;
+    width: 95%;
+    flex-direction: row;
+    align-self: center;
+  }
+  div.cart::after{
+    position: absolute;
+    top:5%;
+    left:61%;
+  }
+  section.sidebar div:first-child{
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 25px;
+  }
+  .menulist .foodlist{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(8,500px);
+    column-gap:0;
+    width: 100%;
+  }
+  .menulist .foodlist div p{
+    display:flex;
+    height: 20%;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+  }
+  div.abcde{
+    gap:20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  section.shopping-cart > h1{
+    margin: 15px auto;
+  }
+  div.cartlist{
+    width: 390px;
+    height: 500px;
+    background: #F1D5BB;
+  }
+  div.cartlist .item{
+    padding: 5px;
+  }
+  div.checkout-box{
+    width:390px;
+  }
+  div.reciept-box{
+    padding: 10px 25px 20px 25px;
+  }
+}
+@media screen and (max-width:400px) {
+  div.cartlist{
+    width: 320px;
+    height: 500px;
+    background: #F1D5BB;
+  }
+  div.cartlist .item{
+    padding: 5px;
+  } 
+  div.checkout-box{
+    width:350px;
+  }
+  div.checkout-box button{
+    width: 100%;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 25px;
+    color: white;
+    background: black;
+    padding: 15px 50px;
+    border:none;
+  }
+}
