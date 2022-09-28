@@ -1,0 +1,165 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+html{
+  font-family: 'Mulish', sans-serif;
+}
+body{
+  height: 100vh;
+  width:100vw;
+}
+main.sushi-app{
+  background-image: url(images/restaurant\ 1.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  color:white;
+  position:relative;
+}
+h2{
+  position: absolute;
+  top: 200px;
+  left:50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 830px;
+  height: 75px;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 75px;
+}
+main.sushi-app p {
+    position:absolute;
+    left:50%;
+    transform: translateX(-50%);
+    top: 320px;
+    width: 822px;
+    height: 62px;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 31px;
+    text-align: center;
+}
+section{
+  position:absolute;
+  top: 440px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 80px;
+  width:520px;
+  display: grid;
+  grid-template-columns: 250px 250px;
+  gap:20px;
+}
+a#menu, a#cart{
+  border-radius: 5px;
+  font-size: 30px;
+  color:black;
+  text-decoration: none;
+  background: white;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.material-icons-round.left{
+  position: absolute;
+  left: 4%;
+  top: 65%;
+  background: transparent;
+  cursor:pointer
+}
+.material-icons-round.right{
+  position: absolute;
+  right: 4%;
+  top:65%;
+  cursor:pointer
+}
+@media (min-width: 600px) and (max-width: 1280px){
+  h2{
+    top: 150px;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 50px;
+  }
+  main.sushi-app p {
+    top: 230px;
+    width: 600px;
+    height: 62px;
+    font-weight: 400;
+    font-size: 20px;
+}
+section{
+  position:absolute;
+  top: 350px;
+  height: 80px;
+  width:520px;
+  display: grid;
+  grid-template-columns: 250px 250px;
+  gap:20x;
+}
+a#menu, a#cart{
+  border-radius: 5px;
+  font-size: 20px; 
+} 
+}
+@media screen and (max-width: 599px){
+  h2{
+    top: 100px;
+    width: 95%;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 30px;
+  }
+  main.sushi-app p {
+    top: 150px;
+    width: 95%;
+    height: 62px;
+    font-weight: 400;
+    font-size: 15px;
+}
+section{
+  position:absolute;
+  top: 250px;
+  height: 150px;
+  width:250px;
+  display: grid;
+  grid-template-columns: 250px;
+  gap:20px;
+} 
+}
+@media (min-width:314px) and (max-width:435px){
+  h2{
+    top: 100px;
+    width: 100%;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+  }
+  main.sushi-app p {
+    top: 150px;
+    width: 100%;
+    height: 62px;
+    font-weight: 400;
+    font-size: 12px;
+    text-align: center;
+}
+section{
+  position:absolute;
+  top: 250px;
+  height: 150px;
+  width:200px;
+  display: grid;
+  grid-template-columns: 200px;
+  gap:20px;
+}
+a#menu, a#cart{
+  border-radius: 5px;
+  font-size: 20px;
+} 
+}
