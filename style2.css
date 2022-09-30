@@ -336,11 +336,6 @@ div.promo-code button{
     margin: 15px auto;
   }
 }
-@media screen and (min-height:737px){
-  div.cart:after{
-    top: 5%;
-  }
-}
 @media (min-width: 314px) and (max-width: 599px){
   body{
     overflow-x: hidden;
@@ -428,10 +423,5 @@ div.promo-code button{
     background: black;
     padding: 15px 50px;
     border:none;
-  }
-}
-@media screen and (max-height:640px){
-  div.cart:after{
-    top:6%;
   }
 }
