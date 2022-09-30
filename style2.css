@@ -337,6 +337,9 @@ div.promo-code button{
   }
 }
 @media (min-width: 314px) and (max-width: 599px){
+  body{
+    overflow-x: hidden;
+  }
   main.menu{
     width: 100%;
     flex-direction: column;
@@ -397,6 +400,9 @@ div.promo-code button{
   }
 }
 @media screen and (max-width:400px) {
+  body{
+    overflow-x: hidden;
+  }
   div.cartlist{
     width: 320px;
     height: 500px;
